@@ -1,119 +1,140 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-        <meta charset="utf-8" />
-        <title>enriquetaso - misc</title>
-        <link rel="stylesheet" href="https://enriquetaso.github.io/theme/css/main.css" />
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
-        <!--[if IE]>
-            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
+
+  <title>enriquetaso - Articles in the misc category</title>
+
+
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="referrer" content="origin" />
+  <meta name="generator" content="Pelican" />
+  <link href="https://enriquetaso.github.io" rel="canonical" />
+
+  <!-- Feed -->
+
+  <link href="https://enriquetaso.github.io/theme/css/style.css" type="text/css" rel="stylesheet" />
+
+  <!-- Code highlight color scheme -->
+      <link href="https://enriquetaso.github.io/theme/css/code_blocks/github.css" rel="stylesheet">
+
+
+  <!-- Custom fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,300' rel='stylesheet' type='text/css' />
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css" />
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+      <meta property="og:locale" content="" />
+    <meta property="og:site_name" content="enriquetaso" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="enriquetaso" />
+    <meta property="og:description" content="View the blog." />
+    <meta property="og:url" content="https://enriquetaso.github.io" />
+      <meta name="og:image" content="https://enriquetaso.github.io/theme/images/post-bg.jpg">
+      <meta name="twitter:card" content="summary_large_image">
+      <meta name="twitter:site" content="@enriquetaso">
+      <meta name="twitter:title" content="enriquetaso">
+      <meta name="twitter:description" content="View the blog.">
+      <meta name="twitter:url" content="https://enriquetaso.github.io">
+          <meta name="twitter:image:src" content="https://enriquetaso.github.io/theme/images/post-bg.jpg">
 </head>
+<!-- TODO : Body class -->
+<body class="home-template">
 
-<body id="index" class="home">
-        <header id="banner" class="body">
-                <h1><a href="https://enriquetaso.github.io/">enriquetaso </a></h1>
-                <nav><ul>
-                    <li><a href="https://enriquetaso.github.io/pages/about-me.html">About me and this blog</a></li>
-                    <li><a href="https://enriquetaso.github.io/pages/contact.html">Contact me!</a></li>
-                    <li><a href="https://enriquetaso.github.io/category/category.html">category</a></li>
-                    <li class="active"><a href="https://enriquetaso.github.io/category/misc.html">misc</a></li>
-                </ul></nav>
-        </header><!-- /#banner -->
-
-            <aside id="featured" class="body">
-                <article>
-                    <h1 class="entry-title"><a href="https://enriquetaso.github.io/working-in-my-first-rbd-bug.html">Working in my first RBD bug</a></h1>
-<footer class="post-info">
-        <abbr class="published" title="2016-08-19T10:02:00+02:00">
-                Published: Fri 19 August 2016
-        </abbr>
-
-        <address class="vcard author">
-                By                         <a class="url fn" href="https://enriquetaso.github.io/author/enriquetaso.html">enriquetaso</a>
-        </address>
-<p>In <a href="https://enriquetaso.github.io/category/misc.html">misc</a>.</p>
-
-</footer><!-- /.post-info --><h1>Working in my first RBD bug</h1>
-<p>The cinder manage command it’s only for independent rbd volumes. However,
-manage an already-managed volumes is allow by the api and there’re not 
-exception raised.</p>
-<p>When you try to manage an already-managed volume, you received an unhandled
-error: <code>UnboundLocalError: local variable ‘rbd_image’ referenced before assignment</code></p>
-<p>How to reproduce:</p>
-<ol>
-<li>Create a volume:</li>
-</ol>
-<div class="highlight"><pre><span></span>cinder create 1 –name vol1
-</pre></div>
+<nav id="menu">
+  <a class="close-button">Close</a>
+  <div class="nav-wrapper">
+    <p class="nav-label">Menu</p>
+    <ul>
 
 
-<ol>
-<li>try to manage the volume (you can check the host with <code>cinder show &lt;volume ID&gt;</code>):</li>
-</ol>
-<div class="highlight"><pre><span></span>cinder manage &lt;volume host&gt; &lt;volume ID&gt;
-</pre></div>
+    </ul>
+  </div>
+</nav>
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header id="blog-header" class="has-cover">
+      <div class="inner">
+        <nav id="navigation">
+            <span id="home-button" class="nav-button">
+                <a class="home-button" href="https://enriquetaso.github.io" title="Home"><i class="ic ic-arrow-left"></i> Home</a>
+            </span>
+          <span id="menu-button" class="nav-button">
+            <a class="menu-button"><i class="ic ic-menu"></i> Menu</a>
+          </span>
+        </nav>
+        <h1 class="post-title">Category misc</h1>
+        <span class="blog-description">Posts: 1</span>
+            <div class="post-cover cover" style="background-image: url('https://enriquetaso.github.io/theme/images/post-bg.jpg')">
+      </div>
+    </header>
 
+  <section id="wrapper">
+    <a class="hidden-close"></a>
 
-<p>3) On the c-vol you can appreciate the unhandled error.</p>
-<p>When this happens the RBD driver <strong>should handle the error</strong>. The RBD driver should 
-catch the exception and show a custom message notifying the user.</p>
-<p>So, trying to handle the problem inside the rbd driver.</p>
-<p>Coding the unit test is still a challenge for me. Thanks to my mentor I learned about
-them and we added one to patch.</p>
-<p>After coded it, It’s time to run the
-<a href="https://review.openstack.org/#/c/354289/1/cinder/tests/unit/volume/drivers/test_rbd.py">unit test</a>
-in devstack:</p>
-<ol>
-<li>Use an environment. One way to do it:</li>
-</ol>
-<div class="highlight"><pre><span></span>vagrant/cinder$ ./run_tests.sh -V
-</pre></div>
+<div id="index" class="container">
+  <main class="content" role="main">
+    <div class="extra-pagination">
+<nav class="pagination" role="pagination">
+  <div class="inner">
+    <span class="pagination-info">Page 1 / 1</span>
+    <div class="clear"></div>
+  </div>
+</nav>
+    </div>
 
+        <article class="post">
+        <div class="inner">
+            <header class="post-header">         
+                <h2 class="post-title"><a href="https://enriquetaso.github.io/working-in-my-first-rbd-bug.html" rel="bookmark" title="Permalink to Working in my first RBD bug">Working in my first RBD bug</a>
+                </h2>
+                <span class="post-meta">
+                        <a href="https://enriquetaso.github.io/author/enriquetaso.html">Enriquetaso</a>
+                     | <time datetime="Fri 19 August 2016">Fri 19 August 2016</time>
+                </span>
+                <div class="clear"></div>
+            </header>
+                <section class="post-excerpt">
+                    <p>
+                        Working in my first RBD bug The cinder manage command it’s only for independent rbd volumes. However, manage an already-managed volumes is allow by the api and there’re not exception raised. When you try to manage an already-managed volume, you...
+                    </p>
+                </section>
+            </div>
+        </article>
 
-<p>the <code>-V</code> will create a virtual env for you</p>
-<ol>
-<li>Active the env:</li>
-</ol>
-<div class="highlight"><pre><span></span>vagrant/cinder$ source env/bin/activate
-</pre></div>
+<nav class="pagination" role="pagination">
+  <div class="inner">
+    <span class="pagination-info">Page 1 / 1</span>
+    <div class="clear"></div>
+  </div>
+</nav>
+  </main>
+</div>
+      <!-- TODO : Body class -->
+    <div id="body-class" style="display: none;" class=""></div>
+  
+    <footer id="footer">
+      <div class="inner">
+        <section class="credits">
+          <span class="credits-theme">Theme <a href="https://github.com/arulrajnet/attila" rel="nofollow">Attila</a></span>
+          <span class="credits-software">Published with <a href="https://github.com/getpelican/pelican" rel="nofollow">Pelican</a></span>
+        </section>
+      </div>
+    </footer>
+  </section>
 
-
-<ol>
-<li>Check it, this should list all of the rbd tests, in that list should be our new one:</li>
-</ol>
-<div class="highlight"><pre><span></span>vagrant/cinder$ testr list-tests | grep RBDTestCase
-</pre></div>
-
-
-<ol>
-<li>Let’s run just that one test:</li>
-</ol>
-<div class="highlight"><pre><span></span>vagrant/cinder$ testr run cinder.tests.unit.volume.drivers.test_rbd.RBDTestCase.test_manage_existing_with_invalid_rbd_image
-</pre></div>
-
-
-<p><a href="https://enriquetaso.github.io/the-first-article.html">Ver el articulo 1</a></p>                </article>
-            </aside><!-- /#featured -->
-        <section id="extras" class="body">
-                <div class="social">
-                        <h2>social</h2>
-                        <ul>
-
-                            <li><a href="https://twitter.com/enriquetaso">twitter</a></li>
-                            <li><a href="https://github.com/enriquetaso">github</a></li>
-                            <li><a href="mailto:lsofia.enriquez@gmail.com">envelope</a></li>
-                        </ul>
-                </div><!-- /.social -->
-        </section><!-- /#extras -->
-
-        <footer id="contentinfo" class="body">
-                <address id="about" class="vcard body">
-                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
-                </address><!-- /#about -->
-
-                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
-        </footer><!-- /#contentinfo -->
-
+  <script type="text/javascript" src="https://enriquetaso.github.io/theme/js/script.js"></script>
+  
 </body>
 </html>
