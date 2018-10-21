@@ -1,112 +1,150 @@
-<!doctype html>
-<html lang="">	
+<!DOCTYPE html>
+<html lang="en">
 <head>
-	<meta charset="utf-8"/>
-	<title>enriquetaso - enriquetaso</title>	
-	<meta name="author" content="enriquetaso">
-	
+        <meta charset="utf-8" />
+        <title>enriquetaso - enriquetaso</title>
+        <link rel="stylesheet" href="https://enriquetaso.github.io/theme/css/main.css" />
 
-	<link rel="stylesheet" href="https://enriquetaso.github.io/theme/css/main.css" type="text/css" />
-		
-
-
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
 </head>
-	
-<body>
 
-    <div class="container">
-	  
-	  <header role="banner">
-	    <div class="feeds">
-	    </div>
-		<a href="https://enriquetaso.github.io" class="title">enriquetaso</a>
-      </header>
-	
-	  <div class="wrapper">
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="https://enriquetaso.github.io/">enriquetaso </a></h1>
+                <nav><ul>
+                    <li><a href="https://enriquetaso.github.io/pages/about-me.html">About me and this blog</a></li>
+                    <li><a href="https://enriquetaso.github.io/pages/contact.html">Contact me!</a></li>
+                    <li><a href="https://enriquetaso.github.io/category/category.html">category</a></li>
+                    <li><a href="https://enriquetaso.github.io/category/misc.html">misc</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
 
-		  <div role="main" class="content">
+            <aside id="featured" class="body">
+                <article>
+                    <h1 class="entry-title"><a href="https://enriquetaso.github.io/working-in-my-first-rbd-bug.html">Working in my first RBD bug</a></h1>
+<footer class="post-info">
+        <abbr class="published" title="2016-08-19T10:02:00+02:00">
+                Published: Fri 19 August 2016
+        </abbr>
 
-<h1>Posts published by: enriquetaso</h1>
+        <address class="vcard author">
+                By                         <a class="url fn" href="https://enriquetaso.github.io/author/enriquetaso.html">enriquetaso</a>
+        </address>
+<p>In <a href="https://enriquetaso.github.io/category/misc.html">misc</a>.</p>
 
-<article class="summary">
-<div class="metadata">
-  <time datetime="2012-12-01T10:02:00+01:00" pubdate>Sat 01 December 2012</time>
-    <address class="vcard author">
-      by <a class="url fn" href="https://enriquetaso.github.io/author/enriquetaso.html">enriquetaso</a>
-    </address>
-  in <a href="https://enriquetaso.github.io/category/category.html">category</a>
-</div>  <div>
-    <h2>
-      <a href="https://enriquetaso.github.io/the-first-article.html" rel="bookmark" title="Permalink to The first article">The first article</a>
-    </h2>
-    <p><p>See below intra-site link examples in reStructuredText format.</p>
-<p><a class="reference external" href="https://enriquetaso.github.io/the-second-article.html">a link relative to the current file</a>
-<a class="reference external" href="https://enriquetaso.github.io/the-second-article.html">a link relative to the content root</a></p>
-</p>
-  </div>
-</article><article class="summary">
-<div class="metadata">
-  <time datetime="2012-12-01T10:02:00+01:00" pubdate>Sat 01 December 2012</time>
-    <address class="vcard author">
-      by <a class="url fn" href="https://enriquetaso.github.io/author/enriquetaso.html">enriquetaso</a>
-    </address>
-  in <a href="https://enriquetaso.github.io/category/misc.html">misc</a>
-</div>  <div>
-    <h2>
-      <a href="https://enriquetaso.github.io/the-second-article.html" rel="bookmark" title="Permalink to The second article">The second article</a>
-    </h2>
-    <p><p>See below intra-site link examples in Markdown format.</p>
-<p><a href="https://enriquetaso.github.io/the-first-article.html">a link relative to the current file</a>
-<a href="https://enriquetaso.github.io/the-first-article.html">a link relative to the content root</a></p></p>
-  </div>
-</article>
-<div class="pagination">
-    Page 1 / 1
-</div>
-
-		  </div>	
-		  
-		  <div class="sidebar">
-		    <div class="sidebar-container" >
+</footer><!-- /.post-info --><h1>Working in my first RBD bug</h1>
+<p>The cinder manage command it’s only for independent rbd volumes. However,
+manage an already-managed volumes is allow by the api and there’re not 
+exception raised.</p>
+<p>When you try to manage an already-managed volume, you received an unhandled
+error: <code>UnboundLocalError: local variable ‘rbd_image’ referenced before assignment</code></p>
+<p>How to reproduce:</p>
+<ol>
+<li>Create a volume:</li>
+</ol>
+<div class="highlight"><pre><span></span>cinder create 1 –name vol1
+</pre></div>
 
 
-  	          <nav>
-	            <h2>Categories</h2>
-	            <ul>
-	                <li ><a href="https://enriquetaso.github.io/category/category.html">category</a></li>
-	                <li ><a href="https://enriquetaso.github.io/category/misc.html">misc</a></li>
-	            </ul>
-	          </nav>
+<ol>
+<li>try to manage the volume (you can check the host with <code>cinder show &lt;volume ID&gt;</code>):</li>
+</ol>
+<div class="highlight"><pre><span></span>cinder manage &lt;volume host&gt; &lt;volume ID&gt;
+</pre></div>
 
-	            <aside>
-	            <h2>Social</h2>
-			      <ul class="social">
-				    <li><a href="#">You can add links in your config file</a><i></i></li>
-				    <li><a href="#">Another social link</a><i></i></li>
-			      </ul>
-			    </aside>
 
-	            <aside>
-	              <h2>Blogroll</h2>
-	              <ul>
-	                  <li><a href="https://twitter.com/enriquetaso">Twitter</a></li>
-	                  <li><a href="https://twitter.com/linuxchixar">LinuxChix Ar</a></li>
-	              </ul>
-	            </aside>
-	        </div>
-		  </div>
+<p>3) On the c-vol you can appreciate the unhandled error.</p>
+<p>When this happens the RBD driver <strong>should handle the error</strong>. The RBD driver should 
+catch the exception and show a custom message notifying the user.</p>
+<p>So, trying to handle the problem inside the rbd driver.</p>
+<p>Coding the unit test is still a challenge for me. Thanks to my mentor I learned about
+them and we added one to patch.</p>
+<p>After coded it, It’s time to run the
+<a href="https://review.openstack.org/#/c/354289/1/cinder/tests/unit/volume/drivers/test_rbd.py">unit test</a>
+in devstack:</p>
+<ol>
+<li>Use an environment. One way to do it:</li>
+</ol>
+<div class="highlight"><pre><span></span>vagrant/cinder$ ./run_tests.sh -V
+</pre></div>
 
-	  </div>
 
-      <footer>
-		<p role="contentinfo">
-		  enriquetaso - Proudly powered by <a href="http://alexis.notmyidea.org/pelican/">pelican</a>. Theme <a href="https://github.com/fle/pelican-sober">pelican-sober</a>.
-    	</p>
+<p>the <code>-V</code> will create a virtual env for you</p>
+<ol>
+<li>Active the env:</li>
+</ol>
+<div class="highlight"><pre><span></span>vagrant/cinder$ source env/bin/activate
+</pre></div>
 
-	  </footer>	
 
-	</div>
-	
+<ol>
+<li>Check it, this should list all of the rbd tests, in that list should be our new one:</li>
+</ol>
+<div class="highlight"><pre><span></span>vagrant/cinder$ testr list-tests | grep RBDTestCase
+</pre></div>
+
+
+<ol>
+<li>Let’s run just that one test:</li>
+</ol>
+<div class="highlight"><pre><span></span>vagrant/cinder$ testr run cinder.tests.unit.volume.drivers.test_rbd.RBDTestCase.test_manage_existing_with_invalid_rbd_image
+</pre></div>
+
+
+<p><a href="https://enriquetaso.github.io/the-first-article.html">Ver el articulo 1</a></p>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <hr />
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="https://enriquetaso.github.io/the-first-article.html" rel="bookmark"
+                           title="Permalink to The first article">The first article</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <abbr class="published" title="2012-12-01T10:02:00+01:00">
+                Published: Sat 01 December 2012
+        </abbr>
+
+        <address class="vcard author">
+                By                         <a class="url fn" href="https://enriquetaso.github.io/author/enriquetaso.html">enriquetaso</a>
+        </address>
+<p>In <a href="https://enriquetaso.github.io/category/category.html">category</a>.</p>
+
+</footer><!-- /.post-info -->                <p>See below intra-site link examples in reStructuredText format.</p>
+<p><a class="reference external" href="https://enriquetaso.github.io/working-in-my-first-rbd-bug.html">a link relative to the current file</a>
+<a class="reference external" href="https://enriquetaso.github.io/working-in-my-first-rbd-bug.html">a link relative to the content root</a></p>
+
+                <a class="readmore" href="https://enriquetaso.github.io/the-first-article.html">read more</a>
+                </div><!-- /.entry-content -->
+            </article></li>
+                </ol><!-- /#posts-list -->
+                </section><!-- /#content -->
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="https://twitter.com/enriquetaso">twitter</a></li>
+                            <li><a href="https://github.com/enriquetaso">github</a></li>
+                            <li><a href="mailto:lsofia.enriquez@gmail.com">envelope</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
 
 </body>
 </html>
