@@ -1,4 +1,148 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>enriquetaso - misc</title><link href="http://enriquetaso.github.io/" rel="alternate"></link><link href="http://enriquetaso.github.io/feeds/misc.atom.xml" rel="self"></link><id>http://enriquetaso.github.io/</id><updated>2012-12-01T10:02:00+01:00</updated><entry><title>The second article</title><link href="http://enriquetaso.github.io/the-second-article.html" rel="alternate"></link><published>2012-12-01T10:02:00+01:00</published><author><name>enriquetaso</name></author><id>tag:enriquetaso.github.io,2012-12-01:/the-second-article.html/</id><summary type="html">&lt;p&gt;See below intra-site link examples in Markdown format.&lt;/p&gt;
-&lt;p&gt;&lt;a href="http://enriquetaso.github.io/the-first-article.html"&gt;a link relative to the current file&lt;/a&gt;
-&lt;a href="http://enriquetaso.github.io/the-first-article.html"&gt;a link relative to the content root&lt;/a&gt;&lt;/p&gt;</summary></entry></feed>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>enriquetaso - misc</title><link href="https://enriquetaso.github.io/" rel="alternate"></link><link href="https://enriquetaso.github.io/feeds/misc.atom.xml" rel="self"></link><id>https://enriquetaso.github.io/</id><updated>2018-06-04T10:00:00+02:00</updated><entry><title>OPNFV Internship and Plugfest 2018</title><link href="https://enriquetaso.github.io/opnfv-internship-and-plugfest-2018.html" rel="alternate"></link><published>2018-06-04T10:00:00+02:00</published><updated>2018-06-04T10:00:00+02:00</updated><author><name>Sofia Enriquez</name></author><id>tag:enriquetaso.github.io,2018-06-04:/opnfv-internship-and-plugfest-2018.html</id><summary type="html">&lt;p&gt;&lt;img alt="OPNFV POSTER" src="https://enriquetaso.github.io/images/plugfest-opnfv-2018-header.png"&gt;&lt;/p&gt;
+&lt;h1&gt;Internship&lt;/h1&gt;
+&lt;p&gt;OPNFV is an open source project within The Linux Foundation that facilitates development
+and evolution of Network Functions Virtualization (NFV) components across various open
+source ecosystems through integration, deployment, and testing. &lt;/p&gt;
+&lt;p&gt;My primary goal while interning at &lt;a href="https://www.opnfv.org/"&gt;OPNFV&lt;/a&gt; was to containerize
+VNFs running in Kubernetes and provide the applications …&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="OPNFV POSTER" src="https://enriquetaso.github.io/images/plugfest-opnfv-2018-header.png"&gt;&lt;/p&gt;
+&lt;h1&gt;Internship&lt;/h1&gt;
+&lt;p&gt;OPNFV is an open source project within The Linux Foundation that facilitates development
+and evolution of Network Functions Virtualization (NFV) components across various open
+source ecosystems through integration, deployment, and testing. &lt;/p&gt;
+&lt;p&gt;My primary goal while interning at &lt;a href="https://www.opnfv.org/"&gt;OPNFV&lt;/a&gt; was to containerize
+VNFs running in Kubernetes and provide the applications to the community. It was a
+very different experience for me interning for OPNFV because my team was based in
+China. I’ve never had to work with a team in a different time zone. I learned a lot,
+and it has taught me a great deal about effective communication. I can say hands down,
+working as an OPNFV intern was one of the coolest things that have happened to me. &lt;/p&gt;
+&lt;p&gt;My favorite task was to containerize the &lt;a href="http://www.projectclearwater.org/"&gt;Clearwater Project&lt;/a&gt;
+with the help of &lt;a href="https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/"&gt;Kubeadm&lt;/a&gt;.
+For those who don't want to search: Clearwater is an open source implementation of IMS
+(the IP Multimedia Subsystem) designed from the ground up for massively scalable
+deployment in the Cloud to provide voice, video and messaging services to millions of
+users and Kubeadm for creating a single master cluster.
+&lt;a href="https://github.com/opnfv/container4nfv/tree/master/src/vagrant/kubeadm_clearwater"&gt;Try it yourself&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Since my internship, I have worked on a paper about the &lt;em&gt;benefits of VNFs and cloud
+computing&lt;/em&gt; (in Spanish) that was selected for CoNallsi 2018 (Argentine Congress of
+Engineering).&lt;/p&gt;
+&lt;p&gt;&lt;img alt="OPNFV attendees raising arms" src="https://enriquetaso.github.io/images/plugfest-opnfv-2018-all.png"&gt;&lt;/p&gt;
+&lt;h1&gt;Plugfest&lt;/h1&gt;
+&lt;p&gt;ETSI hosted OPNFV at their facilities in Sophia Antipolis for a co-located
+hackfest/plugfest June 4-8, 2018. The Event focused on interoperability of the OPNFV
+platform in deployment, network integration, VNF applications, etc. on the &lt;strong&gt;Fraser release&lt;/strong&gt;. &lt;/p&gt;
+&lt;p&gt;&lt;img alt="OPNFV Plugfest the interns and Heather" src="https://enriquetaso.github.io/images/opnfv-plugfest-heather.jpg"&gt;&lt;/p&gt;
+&lt;p&gt;Over thirty people attended the event, most OPNFV members and contributors. I had a great
+time hearing the sessions about OPNFV Verified Program (OVP), Barometer, installers, XCI,
+and the new Lab-as-a-Service (LaaS) offering as well as hosting a hackfest where community
+members collaborated on their respective projects, with sessions spanning edge computing,
+MANO integration, individual project planning, and community-focused discussions.&lt;/p&gt;
+&lt;p&gt;I met incredible people there, and I'm appreciative to the Linux Foundation to help me
+attend with the travel support program.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="OPNFV Plugfest the interns, Ray and David" src="https://enriquetaso.github.io/images/opnfv-plugfest-ray-david.jpg"&gt;&lt;/p&gt;
+&lt;h2&gt;Some cool links&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;The &lt;a href="https://www.opnfv.org/wp-content/uploads/sites/12/2018/09/OPNFV_ETSI_Report_FINAL.pdf"&gt;full report of the event&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;a href="https://www.linuxfoundation.org/blog/2018/10/cross-project-collaboration-a-focus-as-fifth-opnfv-plugfest-co-locates-with-third-etsi-plugteststm-event-to-learn-test-and-integrate-opnfv-fraser/"&gt;LF blog post&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Finally, my &lt;a href="https://www.opnfv.org/blog/2019/01/16/opnfv-intern-spotlight-sofia-enriquez"&gt;interview with the LF&lt;/a&gt;&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Thanks, David, Ray, and Heather!
+Thank you so much!&lt;/p&gt;</content><category term="travel"></category></entry><entry><title>OpenStack Summit Boston 2017</title><link href="https://enriquetaso.github.io/openstack-summit-boston-2017.html" rel="alternate"></link><published>2017-05-25T10:02:00+02:00</published><updated>2017-05-25T10:02:00+02:00</updated><author><name>Sofia Enriquez</name></author><id>tag:enriquetaso.github.io,2017-05-25:/openstack-summit-boston-2017.html</id><summary type="html">&lt;p&gt;Openstack&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="Openstack summit boston 2017" src="https://enriquetaso.github.io/images/boston-summit.jpg"&gt;
+Before start this post, I want to thank the OpenStack Foundation to help me attend
+the OpenStack Summit BOSTON! ❤&lt;/p&gt;
+&lt;h1&gt;Outreachy&lt;/h1&gt;
+&lt;p&gt;Second, but no less important I had the opportunity to meet the great 
+&lt;a href="https://twitter.com/marinaz"&gt;@marinaz&lt;/a&gt;: Outreachy founder 😉 She had
+the great idea to meet all the interns attending to the summit!&lt;/p&gt;
+&lt;p&gt;I didn’t expect that happens ever, It was an unique moment when Marina,
+&lt;a href="https://twitter.com/vkmc"&gt;@vkmc&lt;/a&gt; (also an important Outreachy organizer)
+and us had dinner, talk about the future of Outreachy and ways to
+improved it.&lt;/p&gt;
+&lt;p&gt;One of the ideas I really like, is to implement a registration dashboard
+to help interns know which projects are more solicited and made choose
+easier. Some times you don’t know about all the companies listed and I
+could be a easy way to get a look. What do you think? So, Let’s go!&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Outreachy dinner in Borton 2017" src="https://enriquetaso.github.io/images/boston-outreachy-team.jpg"&gt;&lt;/p&gt;
+&lt;h1&gt;OpenStack Summit Boston&lt;/h1&gt;
+&lt;p&gt;8-11 May: This Summit a new Forum concept debuted, bringing developers
+and operators to the same table for strategic planning discussions.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Openstack summit Boston" src="https://enriquetaso.github.io/images/boston-openstack-pic.png"&gt;&lt;/p&gt;
+&lt;h1&gt;Edward Snowden interview 😮&lt;/h1&gt;
+&lt;p&gt;When a saw on Twitter that Mark Collier was asking for suggested questions
+for his interview with Edward Snowden, I shocked. This keynote interview was
+amazing, an experience that I wont forget easily. From a remote location,
+Snowden fielded questions that OpenStack community submitted via Twitter,
+including why open source infrastructure matters in regards to data privacy
+and the ethical implications of working in open source:&lt;/p&gt;
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/DIxvFuKY0KM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;h1&gt;WOO&lt;/h1&gt;
+&lt;p&gt;I have the chance to be part of the Women of Openstack lunch and enjoy the
+enterview to powerfull women inside the industry.&lt;/p&gt;
+&lt;h1&gt;It’s time for Latin America&lt;/h1&gt;
+&lt;p&gt;On Thursday morning, more than 30 technical leaders from the Latin America
+Movil and Claro teams met here in Boston with members of the OpenStack
+Foundation to discuss plans. The result?  They now have plans to drive
+community building in Latin America and bring like-minded community members
+and users together through meetups and OpenStack Days events. As an Latin
+member of the community I’m really waiting for this to happens!!! There’s
+not OpenStack Days events near to me and I want to be part!&lt;/p&gt;
+&lt;h1&gt;Projects Updates&lt;/h1&gt;
+&lt;p&gt;I couldn’t attend to all of them, but here you can
+&lt;a href="https://www.openstack.org/videos/summits/boston-2017/tracks/project-updates"&gt;watch all of them&lt;/a&gt;!&lt;/p&gt;
+&lt;p&gt;I have to stop here a second, and write about the OpenStack party at
+Fenway Park !!! My first OpenStack city party.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Openstack Party Fenway Park" src="https://enriquetaso.github.io/images/redsocks-boston.jpg"&gt;
+&lt;img alt="Openstack Party Fenway Park2" src="https://enriquetaso.github.io/images/redboston.png"&gt;&lt;/p&gt;</content><category term="travel"></category></entry><entry><title>OpenStack Summit Barcelona 2016</title><link href="https://enriquetaso.github.io/openstack-summit-barcelona-2016.html" rel="alternate"></link><published>2016-10-29T10:00:00+02:00</published><updated>2016-10-29T10:00:00+02:00</updated><author><name>Sofia Enriquez</name></author><id>tag:enriquetaso.github.io,2016-10-29:/openstack-summit-barcelona-2016.html</id><summary type="html">&lt;p&gt;Openstack Summit&lt;/p&gt;</summary><content type="html">&lt;p&gt;&lt;img alt="Openstack summit Barcelona 2016" src="https://enriquetaso.github.io/images/openstack-summit-barcelona-flyer.jpg"&gt;
+&lt;em&gt;OpenStack is much more than just a specific set of software with discrete features.
+OpenStack is also the community that comes together to collaboratively creates
+technology, innovate and puh the state of computing forward. OpenStack software
+powers digital bussiness at some of the biggest companies and scientific efforts
+in the world. Wal-Mart runs online retail on OpenStack. BBVA and Banco Santander
+run customer-facing workloads on OpenStack . The European Organization for Nuclear
+Reaseach (CERN) processes massive amounts of data from the Large Hadron Collider
+to analyzer the fundamentals of physics using OpenStack. And the OpenStack community
+shares lessons learned about cloud usage and the cultural shifts we face with the
+changing technology landscape of today.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://twitter.com/jbryce"&gt;Jonathan Brye&lt;/a&gt;, executive director, OpenStack Foundation&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Openstack summit Barcelona 2016" src="https://enriquetaso.github.io/images/openstack-summit-barcelona-stands.jpg"&gt;&lt;/p&gt;
+&lt;h1&gt;THE WORLD RUNS ON OPENSTACK&lt;/h1&gt;
+&lt;p&gt;&lt;em&gt;25 – 28 October 2016&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;My first summit just passed.&lt;/p&gt;
+&lt;p&gt;Four days of adventures. I have never participated in a event so massive: workshops,
+talks, the Marketplace.&lt;/p&gt;
+&lt;p&gt;I felt comfortable speaking english, as I’m Spanish-speaker, language communication
+represented  one of my fears. Attending  to a international summit for first time,
+with  people from all over the world… I had to be able to share an interesting
+conversation. Finally, this issue was not big deal. I tried my best and I think people
+understand me  😛&lt;/p&gt;
+&lt;p&gt;I love being part of this summits.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Openstack summit Barcelona 2016" src="https://enriquetaso.github.io/images/openstack-summit-barcelona-flyer2.jpg"&gt;&lt;/p&gt;
+&lt;h1&gt;DESIGN SUMMIT&lt;/h1&gt;
+&lt;p&gt;The four-days  summit is divided between the normal summit and the Design Summit, which
+is set on the last days. At Design Summits the developers community gathers to
+brainstorm the requirements for the next release, discuss the implementation details
+and connect with other community members.&lt;/p&gt;
+&lt;p&gt;I joined the Cinder room to be part of the discussion, and finally met the people
+behind the IRC. It was really intense and people discussed about the future of
+cinder and next releases.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="Openstack summit Barcelona 2016" src="https://enriquetaso.github.io/images/openstack-summit-barcelona-outreahy-interns.jpg"&gt;&lt;/p&gt;
+&lt;h1&gt;OUTREACHY INTERNS&lt;/h1&gt;
+&lt;p&gt;I met  OpenStack interns for round 12 and some of the old rounds too. It was excited
+to share the activity and energy around OpenStack with them.&lt;/p&gt;
+&lt;p&gt;It was great to see such a diverse, global group of users, developers and business
+leaders at this Summits. I’m honored to be part of this community.&lt;/p&gt;
+&lt;h1&gt;Talks&lt;/h1&gt;
+&lt;p&gt;&lt;em&gt;How to become a significant contributor to OpenStack if you live outside the US&lt;/em&gt;.
+Since I’m from Argentina: one of my main challenge are locale requirement. I really
+feel represented with this talk. 
+&lt;a href="https://www.openstack.org/videos/summits/barcelona-2016"&gt;You can see all of them here&lt;/a&gt;&lt;/p&gt;
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/2zdLHzQLt-A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+
+&lt;p&gt;Thanks for reading!&lt;/p&gt;</content><category term="travel"></category></entry></feed>

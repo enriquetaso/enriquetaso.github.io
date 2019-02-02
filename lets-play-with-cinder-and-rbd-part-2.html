@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+      <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+
+  <title>Let’s play with Cinder and RBD (part 2)</title>
+
+
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="referrer" content="origin" />
+  <meta name="generator" content="Pelican" />
+  <link href="https://enriquetaso.github.io" rel="canonical" />
+
+  <!-- Feed -->
+
+  <link href="https://enriquetaso.github.io/theme/css/style.css" type="text/css" rel="stylesheet" />
+
+  <!-- Code highlight color scheme -->
+      <link href="https://enriquetaso.github.io/theme/css/code_blocks/github.css" rel="stylesheet">
+
+
+  <!-- Custom fonts -->
+  <link href='https://fonts.googleapis.com/css?family=Montserrat:400,300' rel='stylesheet' type='text/css' />
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css" />
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+
+    <link href="https://enriquetaso.github.io/lets-play-with-cinder-and-rbd-part-2.html" rel="canonical" />
+
+        <meta name="description" content="The approach is to encourage you to get familiar with Cinder. Show what Cinder can do and how RBD performs. Create a volume Create a...">
+
+        <meta name="author" content="enriquetaso">
+
+
+        <meta property="og:locale" content="" />
+    <meta property="og:site_name" content="enriquetaso" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="enriquetaso" />
+    <meta property="og:description" content="View the blog." />
+    <meta property="og:url" content="https://enriquetaso.github.io" />
+      <meta name="og:image" content="https://enriquetaso.github.io/theme/images/post-bg.jpg">
+
+  <meta property="og:type" content="article">
+            <meta property="article:author" content="https://enriquetaso.github.io/author/enriquetaso.html">
+  <meta property="og:url" content="https://enriquetaso.github.io/lets-play-with-cinder-and-rbd-part-2.html">
+  <meta property="og:title" content="Let’s play with Cinder and RBD (part 2)">
+  <meta property="article:published_time" content="2016-07-29 10:02:00+02:00">
+            <meta property="og:description" content="The approach is to encourage you to get familiar with Cinder. Show what Cinder can do and how RBD performs. Create a volume Create a...">
+
+            <meta property="og:image" content="https://enriquetaso.github.io/theme/images/post-bg.jpg">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:site" content="@enriquetaso">
+        <meta name="twitter:title" content="Let’s play with Cinder and RBD (part 2)">
+        <meta name="twitter:url" content="https://enriquetaso.github.io/lets-play-with-cinder-and-rbd-part-2.html">
+
+            <meta name="twitter:image:src" content="https://enriquetaso.github.io/theme/images/post-bg.jpg">
+
+            <meta name="twitter:description" content="The approach is to encourage you to get familiar with Cinder. Show what Cinder can do and how RBD performs. Create a volume Create a...">
+</head>
+<!-- TODO : Body class -->
+<body class="home-template">
+
+<nav id="menu">
+  <a class="close-button">Close</a>
+  <div class="nav-wrapper">
+    <p class="nav-label">Menu</p>
+    <ul>
+
+
+    </ul>
+  </div>
+</nav>
+    <!-- Progressbar -->
+    <div class="progress-container">
+        <span class="progress-bar"></span>
+    </div>
+
+    <!-- Page Header -->
+    <!-- Set your background image for this header on the line below. -->
+    <header id="post-header" class="has-cover">
+      <div class="inner">
+        <nav id="navigation">
+            <span id="home-button" class="nav-button">
+                <a class="home-button" href="https://enriquetaso.github.io" title="Home"><i class="ic ic-arrow-left"></i> Home</a>
+            </span>
+          <span id="menu-button" class="nav-button">
+            <a class="menu-button"><i class="ic ic-menu"></i> Menu</a>
+          </span>
+        </nav>
+        <h1 class="post-title">Let’s play with Cinder and RBD (part 2)</h1>
+        <!-- TODO : Proper class for headline -->
+        <span class="post-meta">
+                <a href="https://enriquetaso.github.io/author/enriquetaso.html">Enriquetaso</a>
+            | <time datetime="vie 29 julio 2016">vie 29 julio 2016</time>
+        </span>
+        <!-- TODO : Modified check -->
+        
+            <div class="post-cover cover" style="background-image: url('https://enriquetaso.github.io/theme/images/post-bg.jpg')">
+        
+      </div>
+    </header>    
+
+  <section id="wrapper">
+    <a class="hidden-close"></a>
+
+    <!-- Post content -->
+    <main class="content" role="main">
+        <article class="post">
+        <div class="inner">
+            <section class="post-content">
+                <p><img alt="OpenStack logo" src="https://enriquetaso.github.io/images/openstack_slide.png">
+The approach is to encourage you to get familiar with Cinder.
+Show what Cinder can do and how RBD performs.</p>
+<ol>
+<li>Create a volume</li>
+<li>Create a snapshot</li>
+<li>Create a volume from a snapshot</li>
+<li>Create a volume from another volume</li>
+</ol>
+<h1>Create volume</h1>
+<p>First, we need to create a logical volume:</p>
+<div class="highlight"><pre><span></span><span class="err">$</span> <span class="n">cinder</span> <span class="n">create</span> <span class="mi">1</span> <span class="o">--</span><span class="n">name</span> <span class="n">v1</span>
+</pre></div>
+
+
+<p>Positional arguments:</p>
+<ul>
+<li><size> : Size of volume, in GiBs. (Required unless snapshot-id/source-volid is specified).</li>
+<li>Check the help command: <code>cinder help create</code> for more info.</li>
+</ul>
+<p>Let’s verify with ~/sudo rbd ls volumes to check what rbd have: </p>
+<div class="highlight"><pre><span></span><span class="err">$</span> <span class="n">sudo</span> <span class="n">rbd</span> <span class="n">ls</span> <span class="n">volumes</span>
+<span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span><span class="n">bar</span>
+<span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span><span class="n">volume</span><span class="o">-</span><span class="mi">1</span><span class="n">b681f9f</span><span class="o">-</span><span class="mi">81</span><span class="n">f6</span><span class="o">-</span><span class="mi">4965</span><span class="o">-</span><span class="n">ad89</span><span class="o">-</span><span class="mi">28</span><span class="n">ffb10c1ede</span>
+</pre></div>
+
+
+<p><code>bar</code> is an image created with RBD client, you can see that all
+the "Cinder volumes" begins with <code>volume-&lt;uuid&gt;.</code>
+Be aware that RBD and Ceph call <em>image</em> what Cinder identify as <em>volume.</em></p>
+<h1>Create snapshot</h1>
+<p>Therefore in RBD, everything is thinly provisioned, snapshots and clones
+use <strong>copy-on-write</strong>.</p>
+<p>When you have a <a href="https://en.wikipedia.org/wiki/Copy-on-write#Copy-on-write_in_storage_media">copy-on-write</a>
+(cow) snapshot, it means it has a dependency
+on the parent. The single blocks in the snapshot will be the blocks that
+have been modified (and thus copied) that makes snapshot creation very
+very fast (you only need to update metadata), and data doesn’t actually
+move or copy anywhere  …. instead, it’s copied on demand, or on write!</p>
+<p>This dependency means that you cannot, e.g., delete a volume that has
+snapshots because that would make those snapshots unusable, like pulling
+the rug out from under them.</p>
+<div class="highlight"><pre><span></span><span class="err">$</span> <span class="n">cinder</span> <span class="n">snapshot</span><span class="o">-</span><span class="n">create</span> <span class="o">&amp;</span><span class="n">lt</span><span class="p">;</span><span class="n">volume</span> <span class="n">ID</span> <span class="ow">or</span> <span class="n">name</span><span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span> <span class="o">--</span><span class="n">name</span> <span class="n">snap1</span>
+<span class="err">$</span> <span class="n">cinder</span> <span class="n">snapshot</span><span class="o">-</span><span class="n">create</span> <span class="n">volume1</span> <span class="o">--</span><span class="n">name</span> <span class="n">snap1</span>
+
+<span class="err">$</span> <span class="n">sudo</span> <span class="n">rbd</span> <span class="n">ls</span> <span class="o">-</span><span class="n">l</span> <span class="n">volumes</span>
+<span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span><span class="n">NAME</span> <span class="n">SIZE</span> <span class="n">PARENT</span> <span class="n">FMT</span> <span class="n">PROT</span> <span class="n">LOCK</span> 
+<span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span><span class="n">bar</span> <span class="mi">1024</span><span class="n">M</span> <span class="mi">1</span> 
+<span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span><span class="n">volume</span><span class="o">-</span><span class="mi">1</span><span class="n">b681f9f</span><span class="o">-</span><span class="mi">81</span><span class="n">f6</span><span class="o">-</span><span class="mi">4965</span><span class="o">-</span><span class="n">ad89</span><span class="o">-</span><span class="mi">28</span><span class="n">ffb10c1ede</span> <span class="mi">1024</span><span class="n">M</span> <span class="mi">2</span> 
+<span class="o">&amp;</span><span class="n">gt</span><span class="p">;</span><span class="n">volume</span><span class="o">-</span><span class="mi">1</span><span class="n">b681f9f</span><span class="o">-</span><span class="mi">81</span><span class="n">f6</span><span class="o">-</span><span class="mi">4965</span><span class="o">-</span><span class="n">ad89</span><span class="o">-</span><span class="mi">28</span><span class="n">ffb10c1ede</span><span class="nd">@snapshot</span><span class="o">-</span><span class="mf">6e9</span><span class="o">..</span><span class="n">d</span> <span class="mi">1024</span><span class="n">M</span> <span class="mi">2</span> <span class="n">yes</span>
+</pre></div>
+
+
+<p>Snaps end with <code>volume.&lt;cinder volume ID&gt;@snapshot-&lt;ID snap&gt;.</code></p>
+<h1>Create volume from snapshot</h1>
+<p>From: <code>cinder snapshot-list</code> get the snap ID.</p>
+<div class="highlight"><pre><span></span><span class="err">$</span> <span class="n">cinder</span> <span class="n">create</span> <span class="o">--</span><span class="n">snapshot</span><span class="o">-</span><span class="nb">id</span> <span class="mf">6e93</span><span class="n">e928</span><span class="o">-</span><span class="mi">2558</span><span class="o">-</span><span class="mi">4</span><span class="n">f12</span><span class="o">-</span><span class="n">a9ab</span><span class="o">-</span><span class="mi">12</span><span class="n">d25cd72dbd</span> <span class="o">--</span><span class="n">name</span> <span class="n">v</span><span class="o">-</span><span class="n">from</span><span class="o">-</span><span class="n">s</span>
+</pre></div>
+
+
+<h1>Create a volume from another volume</h1>
+<p>Since we are cloning from a volume and not a snapshot, we must first create a
+snapshot of the source volume.</p>
+<div class="highlight"><pre><span></span><span class="err">$</span> <span class="n">cinder</span> <span class="n">create</span> <span class="o">--</span><span class="n">source</span><span class="o">-</span><span class="n">volid</span> <span class="mi">1</span><span class="n">b681f9f</span><span class="o">-</span><span class="mi">81</span><span class="n">f6</span><span class="o">-</span><span class="mi">4965</span><span class="o">-</span><span class="n">ad89</span><span class="o">-</span><span class="mi">28</span><span class="n">ffb10c1ede</span> <span class="o">--</span><span class="n">name</span> <span class="n">v</span><span class="o">-</span><span class="n">from</span><span class="o">-</span><span class="n">v</span>
+<span class="err">$</span> <span class="n">sudo</span> <span class="n">rbd</span> <span class="n">ls</span> <span class="o">-</span><span class="n">l</span> <span class="n">volumes</span>
+</pre></div>
+
+
+<p>In this case, the clone volume has a <code>volume-ID@volume-ID.clone_snap.</code></p>
+<h1>READ MORE</h1>
+<ul>
+<li><a href="http://docs.ceph.com/docs/hammer/rbd/rados-rbd-cmds/">Ceph docs: how to create a volume</a></li>
+<li><a href="http://docs.ceph.com/docs/master/rbd/rbd-openstack/">Ceph docs: OpenStack</a></li>
+<li><a href="http://docs.ceph.com/docs/master/rbd/rbd-snapshot/">Ceph docs: Snapshots</a></li>
+</ul>
+<p>The Logs are always relevant. Check the log files used by Block Storage:
+<code>sudo journalctl -f -a --unit devstack@c-bak.service.</code> </p>
+            </section>
+
+            <section class="post-info">
+                <div class="post-share">
+                    <a class="twitter" href="https://twitter.com/share?text=Let’s play with Cinder and RBD (part 2)&amp;url=https://enriquetaso.github.io/lets-play-with-cinder-and-rbd-part-2.html" onclick="window.open(this.href, 'twitter-share', 'width=550,height=235');return false;">
+                    <i class="ic ic-twitter"></i><span class="hidden">Twitter</span>
+                    </a>
+                    <a class="facebook" href="https://www.facebook.com/sharer/sharer.php?u=https://enriquetaso.github.io/lets-play-with-cinder-and-rbd-part-2.html" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;">
+                    <i class="ic ic-facebook"></i><span class="hidden">Facebook</span>
+                    </a>
+                    <a class="googleplus" href="https://plus.google.com/share?url=https://enriquetaso.github.io/lets-play-with-cinder-and-rbd-part-2.html" onclick="window.open(this.href, 'google-plus-share', 'width=490,height=530');return false;">
+                    <i class="ic ic-googleplus"></i><span class="hidden">Google+</span>
+                    </a>
+                    <div class="clear"></div>
+                </div>
+
+
+                <div class="clear"></div>
+
+ 
+
+                </section>
+
+
+                <aside class="post-nav">
+                    <div class="clear"></div>
+                </aside>
+
+            </div>
+        </article>
+    </main>
+      <!-- TODO : Body class -->
+    <div id="body-class" style="display: none;" class=""></div>
+  
+    <footer id="footer">
+      <div class="inner">
+        <section class="credits">
+          <span class="credits-theme">Theme <a href="https://github.com/arulrajnet/attila" rel="nofollow">Attila</a></span>
+          <span class="credits-software">Published with <a href="https://github.com/getpelican/pelican" rel="nofollow">Pelican</a></span>
+        </section>
+      </div>
+    </footer>
+  </section>
+
+  <script type="text/javascript" src="https://enriquetaso.github.io/theme/js/script.js"></script>
+  
+</body>
+</html>
